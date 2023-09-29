@@ -1,6 +1,6 @@
-package Seminar1.Task1;
+package Seminar1.Task2;
 
-public class Product {
+public abstract class Product {
     private String name;
     private int cost;
 
