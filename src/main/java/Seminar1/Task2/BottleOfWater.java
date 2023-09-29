@@ -1,6 +1,7 @@
 package Seminar1.Task2;
 
-public class BottleOfWater extends Product{
+
+public class BottleOfWater extends Product {
     int volume;
 
     public BottleOfWater(String name, int cost, int volume) {

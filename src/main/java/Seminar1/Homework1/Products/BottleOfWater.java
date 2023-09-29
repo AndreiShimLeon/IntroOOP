@@ -8,6 +8,7 @@ public class BottleOfWater extends Product {
         this.volume = volume;
     }
 
+
     public int getVolume() {
         return volume;
     }

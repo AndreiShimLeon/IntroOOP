@@ -1,16 +1,9 @@
 package Seminar1.Task1;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class VendingMachine {
     ArrayList<Product> machine;
-
-    public void initProducts (ArrayList<Product> list){
-        this.machine = list;
-        System.out.println(machine);
-    }
 
     public boolean addProduct(String name, int cost){
         Product product = new Product(name, cost);
@@ -33,5 +26,9 @@ public class VendingMachine {
             }
         }
         return null;
+    }
+
+    public void initProducts(ArrayList<Product> list) {
+        this.machine = list;
     }
 }

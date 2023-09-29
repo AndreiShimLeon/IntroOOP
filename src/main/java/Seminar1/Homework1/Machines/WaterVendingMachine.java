@@ -28,7 +28,7 @@ public class WaterVendingMachine implements VendingMachine {
 
     @Override
     public Product getProductByCost(int cost) {
-                for (int i = 0; i < machine.size(); i++) {
+        for (int i = 0; i < machine.size(); i++) {
             if(machine.get(i).getCost() == cost){
                 return machine.get(i);
             }
