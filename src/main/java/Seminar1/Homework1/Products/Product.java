@@ -1,5 +1,6 @@
 package Seminar1.Homework1.Products;
 
+
 public abstract class Product {
     private String name;
     private int cost;

@@ -26,3 +26,4 @@ public class BottleOfWater extends Product {
                 "} " + super.toString();
     }
 }
+
