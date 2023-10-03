@@ -46,3 +46,4 @@ public class WaterVendingMachine implements VendingMachine {
         return null;
     }
 }
+
