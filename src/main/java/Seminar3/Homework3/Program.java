@@ -1,6 +1,8 @@
 package Seminar3.Homework3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class Program {
@@ -9,32 +11,63 @@ public class Program {
         Student s2 = new Student("George", 25, 2);
         Student s3 = new Student("Thomas", 18, 3);
         Student s4 = new Student("Jerry", 43, 1);
-        Student s5 = new Student("John", 23, 5);
-        Student s6 = new Student("Marry", 27, 2);
-        Student s7 = new Student("Holden", 21, 3);
-        Student s8 = new Student("Natasha", 33, 1);
+        Student s5 = new Student("Andrew", 43, 1);
 
-//        ArrayList <Student> students = new ArrayList<>();
-//        students.add(s1);
-//        students.add(s2);
-//        students.add(s3);
-//        students.add(s4);
-        ArrayList<Student> students1 = new ArrayList<Student>(List.of(s1, s2, s3, s4));
-        ArrayList<Student> students2 = new ArrayList<Student>(List.of(s5, s6, s7));
-        ArrayList<Student> students3 = new ArrayList<Student>(List.of(s8));
-        GroupIterator studentGroupIterator1 = new GroupIterator(students1);
-        GroupIterator studentGroupIterator2 = new GroupIterator(students2);
-        GroupIterator studentGroupIterator3 = new GroupIterator(students3);
-
-//        System.out.println(studentGroupIterator1);
+        ArrayList<Student>students1 = new ArrayList<Student>(List.of(s1,s2,s3,s4,s5));
+        StudyGroup group001 = new StudyGroup(students1);
+        System.out.println(group001);
 
 
-        ArrayList<GroupIterator> stream1 = new ArrayList<GroupIterator>(List.of(studentGroupIterator1, studentGroupIterator2,studentGroupIterator3));
-        StreamIterator stream = new StreamIterator(stream1);
-        System.out.println(stream);
-        System.out.println("****".repeat(20));
-        StreamService.sortSize(stream);
-//        StreamService.sortSize(stream);
-        System.out.println(stream);
+////      Region Iterator
+//        for (Student student: group001
+//             ) {
+//            if(student.getAge()%2==0)
+//                System.out.println(student);
+//        }
+//
+//        Iterator<Student> studentGroupIterator = group001.iterator();
+//        System.out.println(studentGroupIterator.next());
+//        studentGroupIterator.remove();
+//        System.out.println(group001);
+////         end Region Iterator
+
+////        Region Service
+//        StudyGroupService service = new StudyGroupService(group001);
+//        service.removeStudentByName("Andrew");
+//        for (Student student: group001
+//             ) {
+//            System.out.println(student);
+//        }
+//
+////        end Region Service
+
+////        Region Controller
+//        Controller controller = new Controller(group001);
+//        controller.removeStudentByName("Andrew");
+//        for (Student student: group001
+//        ) {
+//            System.out.println(student);
+//        }
+//
+////        end Region Controller
+
+
+//        Region Comparable
+
+
+//        for (Student student: group001
+//        ) {
+//            System.out.println(student);
+//        }
+//
+////        end Region Comparable
+
+        Student s6 = new Student("John", 23, 5);
+        Student s7 = new Student("Marry", 27, 2);
+        Student s8 = new Student("Holden", 21, 3);
+        Student s9 = new Student("Natasha", 33, 1);
+
+
     }
+
 }

@@ -1,23 +1,25 @@
 package Seminar3.Homework3;
 
-public class Student{
-    private int age;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+
+public class Student {
+    private final int id;
+    private static int idCounter = 1;
     private String name;
+    private int age;
     private int yearOfStudy;
 
-
     public Student(String name, int age, int yearOfStudy) {
-        this.age = age;
+        this.id = idCounter++;
         this.name = name;
+        this.age = age;
         this.yearOfStudy = yearOfStudy;
     }
 
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getName() {
@@ -27,6 +29,7 @@ public class Student{
     public void setName(String name) {
         this.name = name;
     }
+
 
     public int getYearOfStudy() {
         return yearOfStudy;
@@ -38,7 +41,8 @@ public class Student{
 
     @Override
     public String toString() {
-        return String.format("Student: %s, age %d, year of study: %d \n", name, age, yearOfStudy);
+        return "\n["+ id +
+                "] " + name + " " + age +
+                ", yearOfStudy " + yearOfStudy;
     }
-
 }

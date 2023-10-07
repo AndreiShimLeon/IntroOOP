@@ -4,24 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class GroupIterator implements Iterator<Student> {
-    private ArrayList<Student> group = new ArrayList<>();
-
-    public ArrayList<Student> getGroup() {
-        return group;
-    }
-
-    public void setGroup(ArrayList<Student> group) {
-        this.group = group;
-    }
-
+    ArrayList<Student> group;
+    private int index;
     public GroupIterator(ArrayList<Student> group) {
         this.group = group;
-    }
-
-    private int index;
-
-    public int getIndex() {
-        return index;
     }
 
     @Override
@@ -31,44 +17,11 @@ public class GroupIterator implements Iterator<Student> {
 
     @Override
     public Student next() {
-        if (hasNext()) return group.get(index++);
-        throw new ArrayIndexOutOfBoundsException();
+        return group.get(index++);
     }
 
     @Override
     public void remove() {
         group.remove(index);
-    }
-
-    public Student searchStudent(String name, int age, int yearOfStudy) {
-        for (Student student : group) {
-            if (student.getName().equals(name) &&
-                    student.getAge() == age &&
-                    student.getYearOfStudy() == yearOfStudy) {
-                return student;
-            }
-        }
-        throw new ArrayIndexOutOfBoundsException();
-    }
-
-    public boolean remove(String name, int age, int yearOfStudy) {
-        for (index = 0; index < group.size(); index++) {
-            if (group.get(index).getName().equals(name) &&
-                    group.get(index).getAge() == age &&
-                    group.get(index).getYearOfStudy() == yearOfStudy) {
-                group.remove(index);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public String toString() {
-        String s = "\n Group"+ "\n";
-        for (Student student: group){
-            s+='\t'+student.toString() + '\n';
-        }
-        return s;
     }
 }
