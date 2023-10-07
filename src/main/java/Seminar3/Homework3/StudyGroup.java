@@ -5,6 +5,10 @@ import java.util.Iterator;
 
 public class StudyGroup implements Iterable<Student>{
 
+    public int getId() {
+        return id;
+    }
+
     private final int id;
     private static int idCounter = 1;
     public ArrayList<Student> getGroup() {
@@ -27,10 +31,10 @@ public class StudyGroup implements Iterable<Student>{
         return new GroupIterator(group);
     }
 
-    public ArrayList<Student> getStudentbyName(String name) {
+    public ArrayList<Student> getStudentbyLastName(String lastName) {
         ArrayList<Student> result = new ArrayList<>();
         this.group.forEach(o -> {
-            if (o.getName().equals(name)) result.add(o);
+            if (o.getLastName().equals(lastName)) result.add(o);
         });
         return result;
     }
@@ -48,7 +52,12 @@ public class StudyGroup implements Iterable<Student>{
 
     @Override
     public String toString() {
-        return "StudyGroup " + this.id +
-                "\n" + group;
+        String s = "\tStudyGroup " + this.id + " \n";
+        for (Student student: group
+             ) {
+            s+= "\t[" + student.getId() + "] " + student.getLastName()+
+                    " " + student.getFirstName() + " " + student.getAge() + " " + student.getYearOfStudy() + "\n";
+        };
+        return s;
     }
 }

@@ -4,16 +4,22 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-public class Student {
+public class Student implements Comparable<Student> {
+    public int getId() {
+        return id;
+    }
+
     private final int id;
     private static int idCounter = 1;
-    private String name;
+    private String lastName;
+    private String firstName;
     private int age;
     private int yearOfStudy;
 
-    public Student(String name, int age, int yearOfStudy) {
+    public Student(String lastName, String firstName, int age, int yearOfStudy) {
         this.id = idCounter++;
-        this.name = name;
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.age = age;
         this.yearOfStudy = yearOfStudy;
     }
@@ -22,14 +28,21 @@ public class Student {
         return age;
     }
 
-    public String getName() {
-        return name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
     public int getYearOfStudy() {
         return yearOfStudy;
@@ -41,8 +54,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return "\n["+ id +
-                "] " + name + " " + age +
+        return "["+ id +
+                "] " + lastName + " " + firstName + " " + age +
                 ", yearOfStudy " + yearOfStudy;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.id - o.getId();
     }
 }
