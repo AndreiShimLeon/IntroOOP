@@ -31,7 +31,7 @@ public class Program {
 
 //        TreeSet<Employee> employeesTree = new TreeSet<>(new EmployeeAgeComparator());
 //        TreeSet<Employee> employeesTree = new TreeSet<>(new EmployeeAgeComparator().reversed());
-        TreeSet<Employee> employeesTree = new TreeSet<>(new EmployeeSalaryComparator());
+        TreeSet<Employee> employeesTree = new TreeSet<>();
 //        TreeSet<Employee> employeesTree = new TreeSet<>(new EmployeeSalaryReversedComparator());
         for (Employee emp: company
         ) {
