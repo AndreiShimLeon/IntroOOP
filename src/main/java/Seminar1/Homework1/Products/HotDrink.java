@@ -22,3 +22,4 @@ public class HotDrink extends BottleOfWater{
                 "} " + super.toString();
     }
 }
+
