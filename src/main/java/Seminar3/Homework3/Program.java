@@ -87,7 +87,7 @@ public class Program {
 //
 //////        end Region Comparator
 
-////        Region Stream Iterator
+////        Region Group Iterator
         Student s6 = new Student("Smith", "John", 23, 5);
         Student s7 = new Student("Banks", "Marry", 27, 2);
         Student s8 = new Student("Iron", "Holden", 21, 3);
@@ -133,13 +133,13 @@ public class Program {
 
         for (Stream stream: streams
              ) {
-            System.out.println("Stream: ");
+            System.out.println("Group: ");
             for (StudyGroup group: stream.getStream()
                  ) {
                 System.out.println("\t" + group);
             }
         }
-////        end Region Stream Iterator
+////        end Region Group Iterator
 
 
 

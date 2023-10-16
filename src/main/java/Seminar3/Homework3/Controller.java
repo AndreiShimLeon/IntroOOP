@@ -29,7 +29,7 @@ public class Controller {
 //        this.controller.sortGroupByAge();
 //    }
 //
-//    public void sortStream(ArrayList<Stream> streamList){
+//    public void sortStream(ArrayList<Group> streamList){
 //        streamList.sort(new StreamComparator());
 //    }
 //

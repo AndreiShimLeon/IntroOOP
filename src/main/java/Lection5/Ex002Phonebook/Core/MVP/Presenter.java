@@ -1,4 +1,4 @@
-package Ex002Phonebook.Core.MVP;
+package Lection5.Ex002Phonebook.Core.MVP;
 import Ex002Phonebook.Core.Models.Contact;
 public class Presenter {
     

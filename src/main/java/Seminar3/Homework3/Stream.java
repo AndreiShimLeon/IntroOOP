@@ -44,7 +44,7 @@ public class Stream implements Iterator<StudyGroup> {
 
     @Override
     public String toString() {
-        return "Stream"+
+        return "Group"+
                 " \n" + stream +
                 '\n';
     }
