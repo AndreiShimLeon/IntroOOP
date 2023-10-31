@@ -1,5 +1,7 @@
 package Seminar1.Homework1.Products;
 
+
+
 public class BottleOfWater extends Product {
     int volume;
 
@@ -24,3 +26,5 @@ public class BottleOfWater extends Product {
                 "} " + super.toString();
     }
 }
+
+

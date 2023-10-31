@@ -41,6 +41,7 @@ public class Main {
         Product cappu500 = new HotDrink("cappuccino", 95, 500, 55);
 
 
+
         ArrayList<Product> hotDrinks = new ArrayList<>(List.of(espresso50,espresso100,latte500,latte300,cappu500,cappu300));
         VendingMachine hotMachine = new HotDrinksMachine();
         hotMachine.initProducts(hotDrinks);
@@ -58,3 +59,6 @@ public class Main {
 
     }
 }
+
+
+

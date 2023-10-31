@@ -3,6 +3,7 @@ package Seminar1.Homework1.Machines;
 import Seminar1.Homework1.Products.BottleOfWater;
 import Seminar1.Homework1.Products.Product;
 
+
 import java.util.ArrayList;
 
 public class WaterVendingMachine implements VendingMachine {
@@ -45,3 +46,4 @@ public class WaterVendingMachine implements VendingMachine {
         return null;
     }
 }
+
